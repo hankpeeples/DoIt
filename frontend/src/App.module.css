@@ -1,0 +1,13 @@
+.appWrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/images/blob-scene.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.windowDrag {
+  height: 1.7rem;
+  background: transparent;
+  --wails-draggable: drag;
+}
