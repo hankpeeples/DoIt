@@ -4,6 +4,7 @@ import (
 	"embed"
 
 	"github.com/wailsapp/wails/v2"
+	"github.com/wailsapp/wails/v2/pkg/logger"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
@@ -19,8 +20,8 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:           "DoIt",
-		Width:           1024,
-		Height:          768,
+		Width:           1511,
+		Height:          921,
 		MinWidth:        600,
 		MinHeight:       600,
 		CSSDragProperty: "--wails-draggable",
@@ -28,7 +29,9 @@ func main() {
 		AssetServer: &assetserver.Options{
 			Assets: assets,
 		},
-		OnStartup: app.startup,
+		LogLevel:           logger.DEBUG,
+		LogLevelProduction: logger.ERROR,
+		OnStartup:          app.startup,
 		Bind: []interface{}{
 			app,
 		},
