@@ -1,13 +1,24 @@
 .appWrapper {
   height: 100vh;
   width: 100vw;
-  background-image: url('./assets/images/blob-scene.png');
+  background: url('./assets/images/blob-scene.png') no-repeat fixed center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .windowDrag {
   height: 1.7rem;
   background: transparent;
   --wails-draggable: drag;
+}
+
+.viewWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.halfContainer {
+  width: 50%;
+  padding: 0 1rem;
 }
