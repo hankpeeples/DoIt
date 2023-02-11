@@ -7,10 +7,20 @@ function App() {
       <div className={styles.windowDrag} />
       <div className={styles.viewWrapper}>
         <div className={styles.halfContainer}>
-          <TodoCard text="Left card" />
+          <h3 className={styles.halfHeading}>All Tasks</h3>
+          <div className={styles.listContainer}>
+            <TodoCard text="Left card" />
+            <TodoCard text="Left card with more content to see what happens" />
+            <TodoCard text="Left card" />
+            <TodoCard text="Left card" />
+          </div>
         </div>
         <div className={styles.halfContainer}>
-          <TodoCard text="Right card" />
+          <h3 className={styles.halfHeading}>Today</h3>
+          <div className={styles.listContainer}>
+            <TodoCard text="Right card" />
+            <TodoCard text="Right card" />
+          </div>
         </div>
       </div>
     </div>
