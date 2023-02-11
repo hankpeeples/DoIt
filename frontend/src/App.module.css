@@ -2,8 +2,7 @@
   height: 100vh;
   width: 100vw;
   /* background: url('./assets/images/blob-scene.png') no-repeat fixed center; */
-  background: url('./assets/images/mesh.jpg') no-repeat fixed center;
-  background-size: cover;
+  background-image: linear-gradient(296.2deg, rgba(73, 73, 73, 1) 36.1%, rgba(16, 15, 15, 1) 93.6%);
 }
 
 .windowDrag {
