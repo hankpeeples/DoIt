@@ -16,10 +16,11 @@
   box-shadow: none;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.prioTopBar {
+  height: 1px;
+  width: 100%;
+  border-radius: 50px;
+  margin-bottom: 1rem;
 }
 
 .iconContainer {
