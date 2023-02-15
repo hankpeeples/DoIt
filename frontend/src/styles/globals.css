@@ -11,3 +11,18 @@ body {
 	color: white;
 }
 
+.greyLine {
+  border: 1px solid grey !important;
+}
+
+.prioOne {
+  background-color: red;
+}
+
+.prioTwo {
+  background-color: yellow;
+}
+
+.prioThree {
+  background-color: green;
+}
