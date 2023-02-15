@@ -20,10 +20,9 @@ func main() {
 	// Create application with options
 	err := wails.Run(&options.App{
 		Title:           "DoIt",
-		Width:           1511,
-		Height:          921,
-		MinWidth:        600,
-		MinHeight:       600,
+		Width:           1100,
+		Height:          800,
+		DisableResize:   true,
 		CSSDragProperty: "--wails-draggable",
 		CSSDragValue:    "drag",
 		AssetServer: &assetserver.Options{
