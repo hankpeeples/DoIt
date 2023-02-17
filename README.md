@@ -20,4 +20,16 @@ To build a redistributable, production mode package, use `wails build`.
 
 ## Design reference/progress tracking photos
 
-![Initial reference photo](https://github.com/hankpeeples/DoIt/blob/main/applicationImages/initialAppDesignReference.png)
+<details>
+<summary>Initial design idea</summary>
+
+![](https://github.com/hankpeeples/DoIt/blob/main/applicationImages/initialAppDesignReference.png)
+
+</details>
+
+<details>
+<summary>Priority colored card border</summary>
+
+![](https://github.com/hankpeeples/DoIt/blob/main/applicationImages/2_prioColoredBorder.png)
+
+</details>
