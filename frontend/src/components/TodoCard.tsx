@@ -6,7 +6,7 @@ import {
   PencilSquareIcon,
   DocumentDuplicateIcon,
   CheckIcon,
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/solid';
 
 type Props = {
   text: string,
@@ -16,8 +16,7 @@ type Props = {
 
 const TodoCard = ({ text, priority, today }: Props) => {
   return (
-    <div className={styles.cardWrapper}>
-      <div className={`${priority} ${styles.prioTopBar}`} />
+    <div className={`${styles.cardWrapper} ${priority}`}>
       <p>{text}</p>
       <div className={styles.iconContainer}>
         {today ? (
