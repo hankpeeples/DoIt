@@ -3,7 +3,6 @@
   margin: 1rem;
   background: transparent;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.37);
-  /* border: 1px solid rgba(0, 0, 0, 0.18); */
   border-radius: 10px;
   width: 100%;
   height: fit-content;
@@ -14,6 +13,7 @@
 .cardWrapper:hover {
   background: #8c898518;
   box-shadow: none;
+  border: 1px solid #88888810;
 }
 
 .iconContainer {
@@ -42,4 +42,8 @@
 .icon:hover {
   color: white;
   transform: scale(1.2);
+}
+
+.icon:active {
+  transform: scale(0.7);
 }
