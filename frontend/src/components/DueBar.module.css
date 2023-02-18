@@ -1,0 +1,50 @@
+.dateWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 10px;
+  color: grey;
+}
+
+.dueDate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calIcon {
+  height: 10px;
+  width: 10px;
+  color: grey;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.icon {
+  height: 14px;
+  width: 14px;
+  color: grey;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  color: white;
+}
+
+.icon:active {
+  transform: scale(0.9);
+}
+
+.iconButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
