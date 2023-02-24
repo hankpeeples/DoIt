@@ -33,3 +33,10 @@ To build a redistributable, production mode package, use `wails build`.
 ![](https://github.com/hankpeeples/DoIt/blob/main/applicationImages/2_prioColoredBorder.png)
 
 </details>
+
+<details>
+<summary>Less icons + due date</summary>
+
+![](https://github.com/hankpeeples/DoIt/blob/main/applicationImages/lessIcons.png)
+
+</details>
