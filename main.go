@@ -10,6 +10,7 @@ import (
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
 	"github.com/wailsapp/wails/v2/pkg/options/mac"
 
+	"github.com/hankpeeples/DoIt/db"
 	"github.com/hankpeeples/DoIt/utils"
 )
 
@@ -22,6 +23,9 @@ func main() {
 
 	u := utils.NewUtils()
 	u.Startup()
+
+	database := db.NewDB()
+	database.Setup(u.Log)
 
 	// Create application with options
 	err := wails.Run(&options.App{
@@ -39,6 +43,8 @@ func main() {
 		OnStartup:          app.startup,
 		Bind: []interface{}{
 			app,
+			u,
+			database,
 		},
 		Mac: &mac.Options{
 			TitleBar: &mac.TitleBar{
