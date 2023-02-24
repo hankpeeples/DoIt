@@ -48,14 +48,18 @@ func (u *Utils) Startup() {
 		SetLevelWriter(glg.INFO, logFile).
 		SetLevelWriter(glg.WARN, logFile).
 		SetLevelWriter(glg.ERR, logFile)
+
+	u.Log.Info("Logger initialized...")
 }
 
-// GetLogger returns the logger instance
+// GetLogger returns the logger instance ---- Returns nil at the moment ??
 func (u *Utils) GetLogger() *glg.Glg {
+	fmt.Println(u.Log)
 	return u.Log
 }
 
-// ConsoleLog prints given message to terminal, meant to be run from frontend
+// ConsoleLog prints given message to log file, meant to be run from frontend.
+// TODO: include log level options
 func (u *Utils) ConsoleLog(msg string) {
 	err := u.Log.Info(msg)
 	if err != nil {
@@ -63,10 +67,11 @@ func (u *Utils) ConsoleLog(msg string) {
 	}
 }
 
+// createStorageDir creates a directory for app data on the fs
 func (u *Utils) createStorageDir() error {
 	// Check to see if local storage dir exists already
 	_, err := os.ReadDir(u.appDataDir)
-	// It doesn't
+	// It doesn't, make it
 	if err != nil {
 		// Create the directory
 		err = os.Mkdir(u.appDataDir, 0777)
