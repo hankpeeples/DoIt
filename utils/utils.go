@@ -13,6 +13,15 @@ type Utils struct {
 	appDataDir string
 }
 
+// create 'enum' for logLevels
+type LogLevel int16
+
+const (
+	Info LogLevel = iota
+	Warn
+	Error
+)
+
 // NewUtils returns a new Utils struct
 func NewUtils() *Utils {
 	return &Utils{}
@@ -60,8 +69,17 @@ func (u *Utils) GetLogger() *glg.Glg {
 
 // ConsoleLog prints given message to log file, meant to be run from frontend.
 // TODO: include log level options
-func (u *Utils) ConsoleLog(msg string) {
-	err := u.Log.Info(msg)
+func (u *Utils) ConsoleLog(lvl LogLevel, msg string, vals ...interface{}) {
+	var err error
+
+	switch lvl {
+	case Info:
+		err = u.Log.Infof(msg, vals)
+	case Warn:
+		err = u.Log.Warnf(msg, vals)
+	case Error:
+		err = u.Log.Errorf(msg, vals)
+	}
 	if err != nil {
 		_ = u.Log.Error("ConsoleLog failed...", err)
 	}
